@@ -12,7 +12,7 @@ public class RubricaWorker extends Thread {
 	}
 
 	public void run() {
-		
+
 		rubrica.addContatto(contatto);
 	}
 

@@ -82,6 +82,11 @@ public class RubricaThreadedApp {
 				e.printStackTrace();
 			}
 		}
+		
+
+		for(Contatto contatto : contatti) {
+			System.out.println(contatto);
+		}
 	}
 	
 	
@@ -120,7 +125,7 @@ public class RubricaThreadedApp {
 		}
 
 		
-		rubrica.stampaContatti();
+		//rubrica.stampaContatti();
 
 	}
 
