@@ -54,14 +54,33 @@ public class RubricaThreadedApp {
 		catch(IOException e1) {
 			e1.printStackTrace();
 		}
+		
+		
+		notify();
 	}
 	
 	
 	
 	public synchronized void stampaContatti() {
-		
+
 		for(Contatto contatto : contatti) {
 			System.out.println(contatto);
+		}
+	}
+	
+	
+	public synchronized void stampaContatti(int num_contatti) {
+		
+		while( contatti.size()<num_contatti ) {
+			
+			try {
+				System.out.println("Printer in attesa...");
+				wait();
+				System.out.println("In stampa...");
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	
@@ -80,15 +99,18 @@ public class RubricaThreadedApp {
 		
 
 		
-		Thread [] threads = new Thread[4];
+		Thread [] threads = new Thread[5];	
 		
 		for(int i=0; i<4; i++) {
 			threads[i] = new RubricaWorker(rubrica, contatti[i]);
 			threads[i].start();
 		}
 		
+		threads[4] = new RubricaPrinter(rubrica);
+		threads[4].start();
 
-		for(int i=0; i<4; i++) {
+
+		for(int i=0; i<5; i++) {
 			try {
 				threads[i].join();
 			} catch (InterruptedException e) {
