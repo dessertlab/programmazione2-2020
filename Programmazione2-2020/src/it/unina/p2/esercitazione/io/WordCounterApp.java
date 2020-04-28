@@ -11,18 +11,21 @@ public class WordCounterApp {
         try {
         	
         	String filename = "/Users/rnatella/Downloads/divina_commedia.txt";
+            
+            HashMap<String,Integer> token_counters = new HashMap<String,Integer>(); // 40000
+                        
+
+            long t1, t2;
+            
+            
+            
+            t1=System.currentTimeMillis();
+            
         	
             FileReader file = new FileReader(filename);
             BufferedReader buff = new BufferedReader(file);
             StreamTokenizer tokenizer = new StreamTokenizer(buff);
             
-            HashMap<String,Integer> token_counters = new HashMap<String,Integer>(); // 40000
-            
-            int tot_parole = 0;
-            
-            long t1, t2;
-            
-            t1=System.currentTimeMillis();
             
             while (tokenizer.nextToken() != StreamTokenizer.TT_EOF) {
 
@@ -43,15 +46,18 @@ public class WordCounterApp {
             				token_counters.put(token, count);
             			}
             			
-                		tot_parole++;            			
             		}
 
             	}
             }
+
+            
+            buff.close();
+            file.close();
+            
             
             t2=System.currentTimeMillis();
             
-            System.out.println("Tempo di Elaborazione: "+(t2-t1)+" ms");
             
                         
             for(String token : token_counters.keySet()) {
@@ -64,10 +70,10 @@ public class WordCounterApp {
             }
             
             
-            System.out.println("Totale parole: "+tot_parole);
+            System.out.println("Totale parole: "+token_counters.size());
             
-            buff.close();
-            file.close();
+            System.out.println("Tempo di Elaborazione: "+(t2-t1)+" ms");
+
             
         } catch (IOException e) {
             System.out.println("Error -- " + e.toString());
