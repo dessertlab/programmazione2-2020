@@ -16,7 +16,7 @@ public class CounterProxy implements ICounter {
 	// metodo per l'invocazione remota del servizio getValue
 	public int get() {
 		try {
-			Socket soc = new Socket (host,port);
+			Socket soc = new Socket(host,port);
 			DataOutputStream ostream= new DataOutputStream (new BufferedOutputStream(soc.getOutputStream()));
 			DataInputStream istream = new DataInputStream(new BufferedInputStream(soc.getInputStream()));
 			

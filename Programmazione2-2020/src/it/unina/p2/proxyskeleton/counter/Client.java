@@ -9,7 +9,7 @@ public class Client{
 	    if ((!operation.equals("sum")&&
 	    	!operation.equals("get")&&
 	    	!operation.equals("sqr")&&
-	    	!operation.equals("inc"))||(args.length!=2)) {
+	    	!operation.equals("inc"))||(args.length<2)) {
 	    		System.out.println("Uso: java Client <host> <comando>. Comando ERRATO! \n Comandi accettati: sum <value>, get, inc, sqr");
 	    } else {
 	    	

@@ -24,6 +24,7 @@ public abstract class CounterSkel implements ICounter {
 			e.printStackTrace();
 		}
 	}
+		
 
 }
 		
