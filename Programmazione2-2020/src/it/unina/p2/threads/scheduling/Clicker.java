@@ -3,7 +3,7 @@ package it.unina.p2.threads.scheduling;
    public class Clicker implements Runnable {
      private int click = 0;
      private Thread t;
-     public volatile boolean running = true;
+     public volatile boolean running = true; //NOTE: This needs to be volatile to force update of the cached wrt original variable
      public Clicker(int p) {
        t = new Thread(this);
        t.setPriority(p);
