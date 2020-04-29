@@ -1,10 +1,10 @@
-package it.unina.p2.esercitazione.networking.client;
+package it.unina.p2.esercitazione.networking.UDPclient;
 
 import java.io.IOException;
 
-import it.unina.p2.esercitazione.networking.server.Contatto;
-import it.unina.p2.esercitazione.networking.server.ContattoAlreadyExistent;
-import it.unina.p2.esercitazione.networking.server.ContattoNotFound;
+import it.unina.p2.esercitazione.networking.UDPserver.Contatto;
+import it.unina.p2.esercitazione.networking.UDPserver.ContattoAlreadyExistent;
+import it.unina.p2.esercitazione.networking.UDPserver.ContattoNotFound;
 
 public class ClientThread extends Thread {
 

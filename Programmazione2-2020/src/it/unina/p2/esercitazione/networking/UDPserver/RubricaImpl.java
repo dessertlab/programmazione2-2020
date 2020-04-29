@@ -1,4 +1,4 @@
-package it.unina.p2.esercitazione.networking.server;
+package it.unina.p2.esercitazione.networking.UDPserver;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

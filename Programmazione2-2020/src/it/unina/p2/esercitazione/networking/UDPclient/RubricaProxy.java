@@ -1,4 +1,4 @@
-package it.unina.p2.esercitazione.networking.client;
+package it.unina.p2.esercitazione.networking.UDPclient;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -7,10 +7,10 @@ import java.net.InetAddress;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
-import it.unina.p2.esercitazione.networking.server.Contatto;
-import it.unina.p2.esercitazione.networking.server.ContattoAlreadyExistent;
-import it.unina.p2.esercitazione.networking.server.ContattoNotFound;
-import it.unina.p2.esercitazione.networking.server.IRubrica;
+import it.unina.p2.esercitazione.networking.UDPserver.Contatto;
+import it.unina.p2.esercitazione.networking.UDPserver.ContattoAlreadyExistent;
+import it.unina.p2.esercitazione.networking.UDPserver.ContattoNotFound;
+import it.unina.p2.esercitazione.networking.UDPserver.IRubrica;
 
 public class RubricaProxy implements IRubrica {
 	

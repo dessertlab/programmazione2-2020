@@ -1,6 +1,6 @@
-package it.unina.p2.esercitazione.networking.client;
+package it.unina.p2.esercitazione.networking.UDPclient;
 
-import it.unina.p2.esercitazione.networking.server.Contatto;
+import it.unina.p2.esercitazione.networking.UDPserver.Contatto;
 
 
 public class RubricaSocketClient {
