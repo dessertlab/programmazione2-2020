@@ -89,8 +89,7 @@ public class ContattoCSV implements Comparable<ContattoCSV> {
 		
 		return this.nome + "#" + this.cognome + 
 				(this.numero != 0 ? "#tel:"+this.numero : "") + 
-				(!this.email.equals("") ? "#email:"+this.email : "") +
-				"\n";
+				(!this.email.equals("") ? "#email:"+this.email : "");
 	}
 
 

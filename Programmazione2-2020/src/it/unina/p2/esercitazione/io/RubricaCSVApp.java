@@ -28,6 +28,9 @@ public class RubricaCSVApp {
 			
 			while( (line = bis.readLine()) != null ) {
 			
+				if(line.equals(""))
+					continue;
+				
 				ContattoCSV contatto = new ContattoCSV(line);
 								
 				contatti.add(contatto);
@@ -47,6 +50,7 @@ public class RubricaCSVApp {
 			
 			for(ContattoCSV c : contatti) {
 				bos.write(c.toString());
+				bos.write('\n');
 			}
 			
 		}
