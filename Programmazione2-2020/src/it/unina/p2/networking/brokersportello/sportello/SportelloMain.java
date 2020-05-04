@@ -2,7 +2,7 @@ package it.unina.p2.networking.brokersportello.sportello;
 
 import java.io.IOException;
 
-import it.unina.p2.broker.BrokerProxy;
+import it.unina.p2.networking.brokersportello.broker.BrokerProxy;
 
 
 public class SportelloMain {

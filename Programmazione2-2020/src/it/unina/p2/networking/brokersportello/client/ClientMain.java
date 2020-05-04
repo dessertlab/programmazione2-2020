@@ -1,7 +1,7 @@
 package it.unina.p2.networking.brokersportello.client;
 
-import it.unina.p2.broker.BrokerProxy;
-import it.unina.p2.broker.IBroker;
+import it.unina.p2.networking.brokersportello.broker.BrokerProxy;
+import it.unina.p2.networking.brokersportello.broker.IBroker;
 
 public class ClientMain {
 

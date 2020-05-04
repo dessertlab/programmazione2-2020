@@ -1,8 +1,8 @@
 package it.unina.p2.networking.brokersportello.client;
 
-import it.unina.p2.broker.ClientRequest;
-import it.unina.p2.broker.IBroker;
-import it.unina.p2.broker.IDClientInvalidoException;
+import it.unina.p2.networking.brokersportello.broker.ClientRequest;
+import it.unina.p2.networking.brokersportello.broker.IBroker;
+import it.unina.p2.networking.brokersportello.broker.IDClientInvalidoException;
 
 public class ClientWorker extends Thread {
 
