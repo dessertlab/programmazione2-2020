@@ -1,4 +1,4 @@
-package it.unina.p2.networking;
+package it.unina.p2.networking.url;
 import java.net.*;
 import java.io.*;
 public class GetFile {
