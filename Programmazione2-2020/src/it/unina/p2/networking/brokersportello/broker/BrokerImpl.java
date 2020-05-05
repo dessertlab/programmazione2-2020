@@ -46,7 +46,7 @@ public class BrokerImpl extends BrokerSkeleton {
 
 		sportelli.add(sportello);
 
-		System.out.println("[Broker] Totale sportelli" + sportelli.size());
+		System.out.println("[Broker] Totale sportelli: " + sportelli.size());
 
 	}
 

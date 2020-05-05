@@ -33,37 +33,8 @@ public abstract class SportelloSkeleton implements ISportello {
 			UDPsocket.receive(UDPpacket);
 
 
-
-
-			int request_len = UDPpacket.getLength();
-
-			String request_str = new String( request_data, 0, request_len );
-
-
-			System.out.println("[SportelloSkeleton] Ricevuto richiesta: "+request_str);
-
-			StringTokenizer tok = new StringTokenizer(request_str, " ");
-
-
-			String token_request = tok.nextToken();
-
-			if(token_request.equals("SERVI")) {
-
-				String clientID_str = tok.nextToken();
-				String requestID_str = tok.nextToken();
-
-				int clientID = Integer.parseInt(clientID_str);
-				int requestID = Integer.parseInt(requestID_str);
-
-				this.serviRichiesta(clientID, requestID);
-				
-			}
-			else {
-
-				// ERRORE!!!
-
-				System.err.println("[SportelloSkeleton] Richiesta malformata!");
-			}
+			Thread worker = new SportelloWorker(UDPsocket, UDPpacket, this);
+			worker.start();
 
 
 		}
