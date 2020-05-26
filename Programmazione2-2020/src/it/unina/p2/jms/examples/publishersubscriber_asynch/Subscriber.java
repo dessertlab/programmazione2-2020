@@ -32,11 +32,11 @@ public class Subscriber {
 
 		TopicConnection tc = tcf.createTopicConnection();
 		
-		tc.setClientID("MakeItLastConn_1"); //to be used in case of Durable subscription 
+		//tc.setClientID("MakeItLastConn_1"); //to be used in case of Durable subscription 
 
 		TopicSession ts = tc.createTopicSession(false, Session.AUTO_ACKNOWLEDGE);
-		//TopicSubscriber subscriber = ts.createSubscriber(soccer);
-		TopicSubscriber subscriber = ts.createDurableSubscriber(soccer, "MakeItLastConn_1");
+		TopicSubscriber subscriber = ts.createSubscriber(soccer);
+		//TopicSubscriber subscriber = ts.createDurableSubscriber(soccer, "MakeItLastConn_1");
 		//TopicSubscriber subscriber = ts.createSubscriber(soccer, "propInt=10", false);
 		
 		
@@ -47,7 +47,7 @@ public class Subscriber {
 		
 		System.out.println("Listener set...");
 		
-		/*subscriber.close(); // If these three lines are commented, the subscriber keeps on listening
+		/*subscriber.close(); // When these three lines are commented, the subscriber keeps on listening
 		ts.close();
 		tc.close();*/
 		
