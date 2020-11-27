@@ -5,20 +5,20 @@ import java.io.*;
 import java.util.*; 
 
 //A class 'Movie' that implements Comparable 
-public class MovieComparatorExample implements Comparable<Movie> 
+public class Movie2 implements Comparable<Movie2> 
 { 
 	private double rating; 
 	private String name; 
 	private int year; 
 
 	// Used to sort movies by year 
-	public int compareTo(Movie m) 
+	public int compareTo(Movie2 m) 
 	{ 
 		return this.year - m.getYear(); 
 	} 
 
 	// Constructor 
-	public MovieComparatorExample(String nm, double rt, int yr) 
+	public Movie2(String nm, double rt, int yr) 
 	{ 
 		this.name = nm; 
 		this.rating = rt; 
@@ -32,9 +32,9 @@ public class MovieComparatorExample implements Comparable<Movie>
 } 
 
 //Class to compare Movies by ratings 
-class RatingCompare implements Comparator<Movie> 
+class RatingCompare implements Comparator<Movie2> 
 { 
-	public int compare(Movie m1, Movie m2) 
+	public int compare(Movie2 m1, Movie2 m2) 
 	{ 
 		if (m1.getRating() < m2.getRating()) return -1; 
 		if (m1.getRating() > m2.getRating()) return 1; 
@@ -43,9 +43,9 @@ class RatingCompare implements Comparator<Movie>
 } 
 
 //Class to compare Movies by name 
-class NameCompare implements Comparator<Movie> 
+class NameCompare implements Comparator<Movie2> 
 { 
-	public int compare(Movie m1, Movie m2) 
+	public int compare(Movie2 m1, Movie2 m2) 
 	{ 
 		return m1.getName().compareTo(m2.getName()); 
 	} 
